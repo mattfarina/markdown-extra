@@ -2,5 +2,22 @@
 
 Markdown Extra is a variant of markdown with some extras. This application is a CLI that can convert mark extra to html.
 
+## Installation
+This it a PHP based CLI so there is a prerequisite of PHP 5.3 being installed for the command line. This is included on OS X and can be installed on ubuntu/debian with `sudo apt-get install php5-cli`.
+
+Do get the application you can [download it from the downloads page](https://github.com/downloads/mattfarina/markdown-extra/markdown-extra). Make sure permissions are set for execution of the file.
+
+## Usage
+This CLI has a few options:
+
+- `convert` takes markdown from stdin (waiting for EOF which is ctrl+d if run from the cli) and puts html out to stdout.
+- `self-update` updates the app to the latest version right from github.
+- `about` provides brief information about the application.
+
+## Development
+This project uses git-flow style work flows. The current release is on the `master` branch and development happens on the `develop` branch.
+
 ## License
 This application is licensed under the MIT license.
+
+_Note: Markdown Extra is licensed under the New BSD. For more detail see the [project page](https://github.com/dflydev/dflydev-markdown)._

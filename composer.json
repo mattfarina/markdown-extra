@@ -4,9 +4,11 @@
   "type": "application",
   "homepage": "https://github.com/mattfarina/markdown-extra",
   "require": {
+    "php": ">=5.3.0",
     "Masterminds/Fortissimo": "2.x-dev",
     "Masterminds/Fortissimo-CLI": "dev-master",
-    "symfony/finder": "dev-master"
+    "symfony/finder": "dev-master",
+    "dflydev/markdown": "1.0.x"
   },
   "authors": [
     {

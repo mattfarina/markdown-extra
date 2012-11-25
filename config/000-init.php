@@ -9,6 +9,14 @@ $registry->route('help', "Show the help text")
   ->does('\Fortissimo\CLI\ShowHelp')
   ;
 
+$registry->route('convert', 'Convert markdown extra to html using standard in and out.')
+  ->does('\mattfarina\MarkdownExtra\GetFromStdIn', 'markdown')
+  ->does('\mattfarina\MarkdownExtra\Convert', 'html')
+    ->using('markdown')->from('cxt:markdown')
+  ->does('\Fortissimo\CLI\IO\Write')
+    ->using('text')->from('cxt:html')
+  ;
+
 $registry->route('self-update', 'Update the application if there is a newer version available.')
   ->does('\Fortissimo\CLI\Update\GetVersionFromTextFile', 'version1')
     ->using('file', FORT_APP_PATH .'/VERSION')
