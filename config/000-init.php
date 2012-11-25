@@ -9,7 +9,7 @@ $registry->route('help', "Show the help text")
   ->does('\Fortissimo\CLI\ShowHelp')
   ;
 
-$registry->route('update', 'Update the application if there is a newer version available.')
+$registry->route('self-update', 'Update the application if there is a newer version available.')
   ->does('\Fortissimo\CLI\Update\GetVersionFromTextFile', 'version1')
     ->using('file', FORT_APP_PATH .'/VERSION')
   ->does('\Fortissimo\CLI\Update\GetVersionFromTextFile', 'version2')
@@ -17,6 +17,9 @@ $registry->route('update', 'Update the application if there is a newer version a
   ->does('\Fortissimo\CLI\Update\CompareVersions', 'versionDiff')
     ->using('version1')->from('cxt:version1')
     ->using('version2')->from('cxt:version2')
+  ->does('\Fortissimo\CLI\Update\Update')
+    ->using('file', 'https://github.com/downloads/mattfarina/markdown-extra/markdown-extra')
+    ->using('doUpdate')->from('cxt:versionDiff')
   ;
 
 $registry->route('about', "Display information about the Markdown Extra CLI.")
