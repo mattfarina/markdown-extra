@@ -17,7 +17,6 @@ $registry->route('update', 'Update the application if there is a newer version a
   ->does('\Fortissimo\CLI\Update\CompareVersions', 'versionDiff')
     ->using('version1')->from('cxt:version1')
     ->using('version2')->from('cxt:version2')
-    ->using('operator', '>')
   ;
 
 $registry->route('about', "Display information about the Markdown Extra CLI.")
