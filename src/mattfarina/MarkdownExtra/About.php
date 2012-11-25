@@ -7,10 +7,7 @@
 namespace mattfarina\MarkdownExtra;
 
 /**
- * This command prints a message to output.
- *
- * The output datasource is expected to conform to the interface
- * \Fortissimo\CLI\IO\Output.
+ * Generates the about text.
  */
 class About extends \Fortissimo\Command\Base {
 
