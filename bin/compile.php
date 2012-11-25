@@ -15,15 +15,16 @@ require_once FORT_APP_PATH . '/vendor/autoload.php';
  */
 
 // The path and name of the file to generate.
-$pharFile = FORT_APP_PATH . '/app.phar';
+$pharFile = FORT_APP_PATH . '/markdown-extra.phar';
 
 // The internal name for the Phar builder.
-$name = 'demo_app';
+$name = 'markdown-extra';
 
 // An array of files to include in the Phar.
 $files = array(
   FORT_APP_PATH . '/bin/_shared.php',
-  FORT_APP_PATH . '/vendor/autoload.php'
+  FORT_APP_PATH . '/vendor/autoload.php',
+  FORT_APP_PATH . '/VERSION'
 );
 
 // An array of directories to traverse and include the files from.
