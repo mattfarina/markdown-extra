@@ -1,0 +1,22 @@
+{
+  "name": "mattfarina/markdown-extra",
+  "description": "A command line to convert markdown extra into html.",
+  "type": "application",
+  "homepage": "https://github.com/mattfarina/markdown-extra",
+  "require": {
+    "Masterminds/Fortissimo": "2.x-dev",
+    "Masterminds/Fortissimo-CLI": "dev-master",
+    "symfony/finder": "dev-master"
+  },
+  "authors": [
+    {
+      "name": "Matt Farina",
+      "email": "matt@mattfarina.com"
+    }
+  ],
+  "license": "MIT",
+  "keywords": ["markdown"],
+  "autoload": {
+    "psr-0": { "mattfarina\\MarkdownExtra": "src/" }
+  }
+}
