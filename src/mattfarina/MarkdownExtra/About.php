@@ -17,11 +17,15 @@ class About extends \Fortissimo\Command\Base {
   public function expects() {
     return $this
       ->description('The about text.')
+      ->usesParam('version', 'The version of the application to display.')
       ->andReturns('The help text block.')
       ;
   }
 
   public function doCommand() {
-    return "This is the help text stuff.\n";
+
+    $version = $this->param('version', '');
+
+    return 'Markdown Extra CLI Version: ' . $version . ".\n";
   }
 }
