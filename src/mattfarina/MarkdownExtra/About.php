@@ -23,6 +23,10 @@ class About extends \Fortissimo\Command\Base {
 
     $version = $this->param('version', '');
 
-    return 'Markdown Extra CLI Version: ' . $version . ".\n";
+    return '<info>Markdown Extra CLI Version: ' . $version . ".</info>
+The markdown-extra CLI is available under the MIT license
+while the markdown library is available under a New BSD license.
+
+For more details see http://github.com/mattfarina/markdown-extra.";
   }
 }
