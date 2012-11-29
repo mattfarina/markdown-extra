@@ -10,6 +10,12 @@ $registry->route('help', "Show the help text")
   ;
 
 $registry->route('convert', 'Convert markdown extra to html using standard in and out.')
+  ->does('\Fortissimo\CLI\SetupOptions', 'CliOptions')
+  ->does('\Fortissimo\CLI\ParseOptions', 'opts')
+    ->using('help', 'Copy an object to object storage.')
+    ->using('usage', '<comment>Usage:</comment> ' . $argv[0]. ' convert [--OPTIONS]')
+    ->using('optionSpec')->from('cxt:CliOptions')
+    ->using('options', $argv)
   ->does('\mattfarina\MarkdownExtra\GetFromStdIn', 'markdown')
   ->does('\mattfarina\MarkdownExtra\Convert', 'html')
     ->using('markdown')->from('cxt:markdown')
