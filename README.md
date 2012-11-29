@@ -10,7 +10,7 @@ Do get the application you can [download it from the downloads page](https://git
 ## Usage
 This CLI has a few options:
 
-- `convert` takes markdown from stdin (waiting for EOF which is ctrl+d if run from the cli) and puts html out to stdout.
+- `convert` Converts markdown extra into html. Use --help to see the different ways to handle IO.
 - `self-update` updates the app to the latest version right from github.
 - `about` provides brief information about the application.
 
