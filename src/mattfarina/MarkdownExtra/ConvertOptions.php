@@ -27,6 +27,8 @@ class ConvertOptions extends \Fortissimo\Command\Base {
 
     $id->addOption(new InputOption('file', 'f', InputOption::VALUE_OPTIONAL, 'Input file (optional). StdIn will be used if no file is provided.'));
     $id->addOption(new InputOption('out', 'o', InputOption::VALUE_OPTIONAL, 'Output file (optional). StdOut will be used if no file is provided.'));
+    $id->addOption(new InputOption('toc', NULL, InputOption::VALUE_NONE, 'Enable the tag {:toc} to be converted into a table of contents.'));
+    $id->addOption(new InputOption('ordered', NULL, InputOption::VALUE_NONE, 'By default a TOC is generated using unordered lists. This switches to ordered lists.'));
 
   }
 }

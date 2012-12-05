@@ -8,7 +8,8 @@
     "Masterminds/Fortissimo": "2.x-dev",
     "Masterminds/Fortissimo-CLI": "dev-master",
     "symfony/finder": "dev-master",
-    "dflydev/markdown": "1.0.x"
+    "dflydev/markdown": "1.0.x",
+    "querypath/querypath": "dev-master"
   },
   "authors": [
     {

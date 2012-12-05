@@ -22,8 +22,12 @@ $registry->route('convert', 'Convert markdown extra to html using standard in an
     ->using('file')->from('cxt:file')
   ->does('\mattfarina\MarkdownExtra\Convert', 'html')
     ->using('markdown')->from('cxt:markdown')
+  ->does('\mattfarina\MarkdownExtra\Toc', 'html2')
+    ->using('html')->from('cxt:html')
+    ->using('enable')->from('cxt:toc')
+    ->using('ordered')->from('cxt:ordered')
   ->does('\mattfarina\MarkdownExtra\WriteOutput')
-    ->using('text')->from('cxt:html')
+    ->using('text')->from('cxt:html2')
     ->using('file')->from('cxt:out')
   ;
 
