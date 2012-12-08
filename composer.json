@@ -5,9 +5,8 @@
   "homepage": "https://github.com/mattfarina/markdown-extra",
   "require": {
     "php": ">=5.3.0",
-    "Masterminds/Fortissimo": "2.x-dev",
-    "Masterminds/Fortissimo-CLI": "dev-master",
-    "symfony/finder": "dev-master",
+    "masterminds/fortissimo": "3.0.0-alpha1",
+    "masterminds/fortissimo-cli": "dev-master",
     "dflydev/markdown": "1.0.x",
     "querypath/querypath": "dev-master"
   },
