@@ -40,7 +40,7 @@ $registry->route('self-update', 'Update the application if there is a newer vers
     ->using('version1')->from('cxt:version1')
     ->using('version2')->from('cxt:version2')
   ->does('\Fortissimo\CLI\Update\Update')
-    ->using('file', 'https://github.com/downloads/mattfarina/markdown-extra/markdown-extra')
+    ->using('file', 'http://download.mattfarina.com/markdown-extra')
     ->using('doUpdate')->from('cxt:versionDiff')
   ;
 
