@@ -5,7 +5,7 @@ Markdown Extra is a variant of markdown with some extras. This application is a 
 ## Installation
 This it a PHP based CLI so there is a prerequisite of PHP 5.3 being installed for the command line. This is included on OS X and can be installed on ubuntu/debian with `sudo apt-get install php5-cli`.
 
-Do get the application you can [download it from the downloads page](https://github.com/downloads/mattfarina/markdown-extra/markdown-extra). Make sure permissions are set for execution of the file.
+To install the application [download](http://download.mattfarina.com/markdown-extra) it and set the permissions to be executable `chmod +x markdown-extra`.
 
 ## Usage
 This CLI has a few options:
