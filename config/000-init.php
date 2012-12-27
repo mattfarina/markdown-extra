@@ -14,7 +14,7 @@ $registry->route('convert', 'Convert markdown extra to html using standard in an
   ->does('\mattfarina\MarkdownExtra\ConvertOptions')
     ->using('inputDefinition')->from('cxt:CliOptions')
   ->does('\Fortissimo\CLI\ParseOptions', 'opts')
-    ->using('help', 'Copy an object to object storage.')
+    ->using('help', 'Convert markdown extra to html.')
     ->using('usage', '<comment>Usage:</comment> ' . $argv[0]. ' convert [--OPTIONS]')
     ->using('optionSpec')->from('cxt:CliOptions')
     ->using('options', $argv)
