@@ -41,7 +41,7 @@ class Toc extends \Fortissimo\Command\Base {
 
       // Build the TOC
       $cmd = $this;
-      $document->find('h1, h2, h3, h4, h5, h6')->each(function($index, $item) use (&$toc, $cmd, &$curr, &$last, $type) {
+      $document->xpath('//h1|//h2|//h3|//h4|//h5|//h6')->each(function($index, $item) use (&$toc, $cmd, &$curr, &$last, $type) {
 
         // Put the header level into $curr (e.g., 1, 2, 3...)
         sscanf($item->tagName, 'h%u', $curr);
@@ -51,8 +51,12 @@ class Toc extends \Fortissimo\Command\Base {
           $toc .= '<' . $type . ">\n";
         }
         // If the current level is less than the last level go up appropriate amount.
-        else {
+        elseif ($curr < $last) {
           $toc .= str_repeat('</li></' . $type .">\n", $last - $curr) . "</li>\n";
+        }
+        // If the current level is equal to the last.
+        else {
+          $toc .= "</li>\n";
         }
 
         $qpitem = \QueryPath::with($item);
